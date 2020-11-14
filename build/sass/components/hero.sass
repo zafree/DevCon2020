@@ -1,0 +1,49 @@
+.hero
+  position: relative
+  background-color: $blue
+  // padding-bottom: 70px
+  &__container
+    +container-wide
+  &__row
+    position: relative
+    +desktop
+      display: flex
+      flex-flow: row nowrap
+      align-items: stretch
+  &__videoWrapper
+    position: relative
+    +desktop
+      flex: 1
+    .video
+      position: relative
+      width: 100%
+      padding-bottom: 56.25%
+      background-color: $black
+      span
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: inline-flex
+        width: 144px
+        height: 32px
+        background-repeat: no-repeat
+        background-size: cover
+  &__chatWrapper
+    height: 400px
+    background-color: $white
+    box-shadow: 0 1px 5px rgba($black, 0.21)
+    +desktop
+      height: auto
+      width: 300px
+      background-color: $white
+      box-shadow: none
+    .chat
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 1.4em
+      color: #999
+
+      
