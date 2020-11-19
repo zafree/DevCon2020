@@ -543,6 +543,8 @@ nav a.active::after {
   color: #51b2a4;
   font-weight: 700;
   margin-top: 30px; }
+.wrapContent .heading + .copy {
+  margin-top: 20px; }
 .wrapContent .timetime {
   font-size: 1.4em;
   color: #999;
@@ -1181,6 +1183,67 @@ nav a.active::after {
 
 .sessionVideo__row > input#tab1:checked ~ .sessionVideo__sessionInfo, .sessionVideo__row > input#tab2:checked ~ .sessionVideo__sessionInfo + .sessionVideo__chatWrapper {
   display: block; }
+
+.eventAgenda {
+  position: relative;
+  padding-bottom: 100px; }
+.eventAgenda__container {
+  position: relative;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1060px; }
+.eventAgenda__row {
+  position: relative; }
+.eventAgenda__item {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px; }
+.eventAgenda__item:not(:last-child) {
+  border-bottom: 1px solid #ebebeb; }
+.eventAgenda .wrapContent {
+  margin-left: 30px;
+  min-height: 125px; }
+@media screen and (min-width: 767px) {
+  .eventAgenda .wrapContent {
+    margin-left: 300px;
+    display: flex;
+    flex-flow: row wrap; } }
+@media screen and (min-width: 767px) {
+  .eventAgenda .heading, .eventAgenda .title {
+    width: 100%; } }
+.eventAgenda .heading {
+  margin-top: 0; }
+.eventAgenda .timetime {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #000;
+  margin-top: 0;
+  transform: translateX(-100%) rotate(-90deg);
+  transform-origin: top right;
+  margin-left: -40px;
+  margin-top: 8px; }
+@media screen and (min-width: 767px) {
+  .eventAgenda .timetime {
+    transform: translateX(-100%);
+    width: 300px;
+    font-size: 2.4em;
+    margin-top: 0;
+    margin-left: 0; } }
+.eventAgenda .timetime + .copy {
+  margin-top: 20px; }
+@media screen and (min-width: 767px) {
+  .eventAgenda .speaker {
+    display: inline-flex;
+    width: 250px;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    padding: 9px;
+    margin-right: 20px; } }
 
 .honorableSpeaker {
   position: relative;
