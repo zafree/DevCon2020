@@ -115,7 +115,7 @@
     position: relative
     display: flex
     margin-top: 20px
-    &__imageWrapper
+    &__image
       position: relative
       width: 40px
       height: 40px
@@ -123,11 +123,9 @@
       background-color: rgba($blue, 0.05)
       border-radius: 4px
       overflow: hidden
-      img
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
     &__content
       flex: 1
       position: relative

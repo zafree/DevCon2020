@@ -209,34 +209,21 @@ footer {
     height: 124px; } }
 
 .logo {
-  height: 56px;
-  position: relative; }
-@media screen and (min-width: 767px) {
-  .logo {
-    display: inline-flex; } }
-@media screen and (min-width: 1060px) {
-  .logo {
-    width: 321px;
-    justify-content: flex-end; } }
-.logo a {
-  display: inline-flex;
-  align-items: center;
-  padding-left: 20px;
-  height: 100%; }
-@media screen and (min-width: 1060px) {
-  .logo a {
-    padding-left: 0; } }
-.logo a span {
-  display: inline-flex;
+  position: relative;
   width: 126px;
   height: 16px;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  margin-left: 20px; }
 @media screen and (min-width: 767px) {
-  .logo a span {
+  .logo {
     width: 188px;
     height: 24px; } }
-.logo a span::before {
+@media screen and (min-width: 1060px) {
+  .logo {
+    margin-left: 132px; } }
+.logo::before {
   content: "Live";
   display: inline-flex;
   line-height: 1;
@@ -254,7 +241,7 @@ footer {
   transform: translateY(-50%);
   margin-left: 10px; }
 @media screen and (min-width: 767px) {
-  .logo a span::before {
+  .logo::before {
     top: auto;
     left: auto;
     transform: none;
@@ -263,7 +250,7 @@ footer {
     margin-right: 86px;
     font-size: 12px;
     padding: 4px 10px;
-    margin-bottom: -10px; } }
+    margin-bottom: -28px; } }
 
 .hamburger {
   position: relative;
@@ -301,15 +288,12 @@ footer {
 @media screen and (min-width: 1060px) {
   .organizer {
     display: inline-flex;
-    height: 52px;
-    padding-right: 20px;
-    width: 300px; }
-  .organizer span {
-    display: inline-flex;
     width: 224px;
     height: 52px;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; } }
+    margin-right: 76px; } }
 
 #SideMenu {
   z-index: 101; }
@@ -587,19 +571,17 @@ nav a.active::after {
   position: relative;
   display: flex;
   margin-top: 20px; }
-.wrapContent .speaker__imageWrapper {
+.wrapContent .speaker__image {
   position: relative;
   width: 40px;
   height: 40px;
   border: 1px solid rgba(14, 25, 62, .1);
   background-color: rgba(14, 25, 62, .05);
   border-radius: 4px;
-  overflow: hidden; }
-.wrapContent .speaker__imageWrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; }
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 .wrapContent .speaker__content {
   flex: 1;
   position: relative;
@@ -977,7 +959,10 @@ nav a.active::after {
   justify-content: center;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 .sponsors__item:hover, .sponsors__item:focus {
   outline: none; }
 @media screen and (min-width: 767px) {
@@ -1032,14 +1017,6 @@ nav a.active::after {
 @media screen and (min-width: 767px) {
   .sponsors__item.themexpert {
     width: 163px; } }
-.sponsors__item span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover; }
 
 .sessionVideo {
   position: relative;
@@ -1255,17 +1232,15 @@ nav a.active::after {
   color: #000; }
 .honorableSpeaker .speaker > * {
   pointer-events: none; }
-.honorableSpeaker .speaker__imageWrapper {
+.honorableSpeaker .speaker__image {
   position: relative;
   width: 100%;
   padding-bottom: 100%;
   background-color: #51b2a4;
-  overflow: hidden; }
-.honorableSpeaker .speaker__imageWrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; }
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 .honorableSpeaker .speaker__content {
   width: 100%;
   position: relative;

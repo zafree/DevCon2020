@@ -40,17 +40,15 @@
     color: $black
     > *
       pointer-events: none
-    &__imageWrapper
+    &__image
       position: relative
       width: 100%
       padding-bottom: 100%
       background-color: $green
       overflow: hidden
-      img
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
     &__content
       width: 100%
       position: relative

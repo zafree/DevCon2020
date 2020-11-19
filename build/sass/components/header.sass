@@ -11,66 +11,48 @@
     justify-content: space-between
     +tablet
       height: 124px
-    +desktop
-      // height: 124px
 
 .logo
-  height: 56px
   position: relative
+  width: 126px
+  height: 16px
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  margin-left: 20px
   // background-color: rgba($white, 0.2)
   +tablet
-    // width: 300px
-    display: inline-flex
+    width: 188px
+    height: 24px
   +desktop
-    width: 321px
-    // display: inline-flex
-    justify-content: flex-end
-  a
+    margin-left: 132px
+  &::before
+    content: "Live"
     display: inline-flex
-    align-items: center
-    padding-left: 20px
-    height: 100%
+    line-height: 1
+    background-color: #ff0000
+    color: $white
+    font-size: 10px
+    padding: 4px 8px
+    font-style: normal
+    text-transform: uppercase
+    font-weight: 500
+    border-radius: 3px
+    position: absolute
+    top: 50%
+    left: 100%
+    transform: translateY(-50%)
+    margin-left: 10px
     +tablet
-
-    +desktop
-      padding-left: 0
-      
-    span
-      display: inline-flex
-      width: 126px
-      height: 16px
-      background-repeat: no-repeat
-      background-size: cover
-      +tablet
-        width: 188px
-        height: 24px
-      &::before
-        content: "Live"
-        display: inline-flex
-        line-height: 1
-        background-color: #ff0000
-        color: $white
-        font-size: 10px
-        padding: 4px 8px
-        font-style: normal
-        text-transform: uppercase
-        font-weight: 500
-        border-radius: 3px
-        position: absolute
-        top: 50%
-        left: 100%
-        transform: translateY(-50%)
-        margin-left: 10px
-        +tablet
-          top: auto
-          left: auto
-          transform: none
-          bottom: 0
-          right: 0
-          margin-right: 86px
-          font-size: 12px
-          padding: 4px 10px
-          margin-bottom: -10px
+      top: auto
+      left: auto
+      transform: none
+      bottom: 0
+      right: 0
+      margin-right: 86px
+      font-size: 12px
+      padding: 4px 10px
+      margin-bottom: -28px
 
 .hamburger
   +button
@@ -86,13 +68,12 @@
   display: none  
   +desktop
     display: inline-flex
+    width: 224px
     height: 52px
-    padding-right: 20px
-    width: 300px
-    span
-      display: inline-flex
-      width: 224px
-      height: 52px
-      background-repeat: no-repeat
-      background-size: cover
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    margin-right: 76px
+    // background-color: rgba($white, 0.2)
+
     
