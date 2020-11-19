@@ -2,7 +2,7 @@
 .sessionVideo
   position: relative
   background-color: $blue
-  // padding-bottom: 70px
+  overflow: hidden
   &__container
     +container-wide
   &__row
@@ -34,9 +34,13 @@
   &__chatWrapper
     position: relative
     background-color: $white
+    height: calc((100vh - 56.25vw) - (56px * 2))
+    overflow-y: auto
+    +tablet
+      height: auto
+      overflow-y: visible
     +desktop
       order: 2
-      height: auto
       width: 300px
       background-color: $white
       &::after
@@ -47,7 +51,6 @@
         width: 100%
         height: 100%
         box-shadow: 0 1px 5px rgba($black, .19)
-        pointer-events: none
       
     .sessionVideoChat
       padding-top: 20px
@@ -65,30 +68,52 @@
     position: relative
     width: 100%
     background-color: $white
+    padding-bottom: 70px
+    height: calc((100vh - 56.25vw) - (56px * 2))
+    overflow-y: auto
+    +tablet
+      height: auto
+      overflow-y: visible
     +desktop
       order: 3
+      &::before,
+      &::after
+        content: ""
+        position: absolute
+        top: 0
+        width: 1000%
+        height: 100%
+        background-color: $white
+      &::before
+        left: 0
+        transform: translateX(-100%)
+      &::after
+        right: 0
+        transform: translateX(100%)
     .sessionVideoInfo
       +container
-      &__content
+      .wrapContent
         max-width: 600px
-        padding-top: 20px
+        padding-top: 1px
+        +tablet
+          display: flex
+          flex-flow: row wrap
         +desktop
           padding-top: 50px
           padding-bottom: 70px
+      .heading,
       .title
-        font-size: 2.4em
-        color: $green
-        font-weight: $weight-bold
-      .timetime
-        font-size: 1.4em
-        color: #999
-        margin-top: 8px
-      .copy
-        max-width: 520px
-        font-size: 1.4em
-        color: #666
-        line-height: 1.55
-        margin-top: 30px
+        +tablet
+          width: 100%
+      .speaker
+        +tablet
+          display: inline-flex
+          width: 250px
+          border: 1px solid #EBEBEB
+          border-radius: 6px
+          padding: 9px
+          margin-right: 20px
+        
 
 .sessionVideo__row > input[type="radio"] 
   position: absolute
