@@ -1206,6 +1206,9 @@ nav a.active::after {
     margin-left: 300px;
     display: flex;
     flex-flow: row wrap; } }
+.eventAgenda a.heading {
+  text-decoration: none;
+  line-height: 1.22; }
 @media screen and (min-width: 767px) {
   .eventAgenda .heading, .eventAgenda .title {
     width: 100%; } }

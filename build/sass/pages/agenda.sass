@@ -25,27 +25,31 @@
       margin-left: 300px
       display: flex
       flex-flow: row wrap
+  a.heading
+    text-decoration: none
+    line-height: $heading-line-height
+    // background-color: rgba($green, 0.1)
   .heading,
   .title
     +tablet
       width: 100%
   .heading 
     margin-top: 0
+    // background-color: rgba($black, 0.1)
     
   .timetime
     position: absolute
     top: 0 
     left: 0
-    // width: 60pxs
     font-size: 1.4em
     font-weight: $weight-semibold
     color: $black
     margin-top: 0
-    // background-color: rgba($red, 0.1)
     transform: translateX(-100%) rotate(-90deg)
     transform-origin: top right
     margin-left: -40px
     margin-top: 6px
+    // background-color: rgba($red, 0.1)
     +tablet
       transform: translateX(-100%) 
       width: 300px
