@@ -156,6 +156,35 @@ svg {
   opacity: 1;
   visibility: visible; }
 
+.pageHeader {
+  position: relative;
+  background-color: #0e193e;
+  padding-bottom: 10px; }
+@media screen and (min-width: 767px) {
+  .pageHeader {
+    padding-top: 40px;
+    padding-bottom: 50px; } }
+.pageHeader__container {
+  position: relative;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1060px;
+  padding-left: 20px;
+  padding-right: 20px; }
+@media screen and (min-width: 767px) {
+  .pageHeader__container {
+    padding-left: 30px;
+    padding-right: 30px; } }
+.pageHeader__title {
+  font-size: 4em;
+  font-weight: 700;
+  color: #51b2a4; }
+@media screen and (min-width: 767px) {
+  .pageHeader__title {
+    font-size: 7em; } }
+
 footer {
   height: 80px;
   border-top: 1px solid #ebebeb; }
@@ -187,7 +216,7 @@ footer {
     display: inline-flex; } }
 @media screen and (min-width: 1060px) {
   .logo {
-    width: 300px;
+    width: 321px;
     justify-content: flex-end; } }
 .logo a {
   display: inline-flex;
@@ -402,6 +431,19 @@ nav a:hover, nav a:focus {
     color: #fff; } }
 nav a:not(:last-child) {
   margin-right: 40px; }
+nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 42%;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #51b2a4; }
+@media screen and (min-width: 767px) {
+  nav a.active::after {
+    height: 1px;
+    width: 100%;
+    bottom: 0; } }
 
 .hero {
   position: relative;
@@ -535,6 +577,12 @@ nav a:not(:last-child) {
   margin-top: 30px; }
 .wrapContent .title:first-child + .copy {
   margin-top: 20px; }
+.wrapContent a.speaker {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000; }
+.wrapContent a.speaker > * {
+  pointer-events: none; }
 .wrapContent .speaker {
   position: relative;
   display: flex;
@@ -1156,5 +1204,181 @@ nav a:not(:last-child) {
 
 .sessionVideo__row > input#tab1:checked ~ .sessionVideo__sessionInfo, .sessionVideo__row > input#tab2:checked ~ .sessionVideo__sessionInfo + .sessionVideo__chatWrapper {
   display: block; }
+
+.honorableSpeaker {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 100px; }
+.honorableSpeaker__container {
+  position: relative;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1060px; }
+.honorableSpeaker__row {
+  position: relative;
+  overflow: hidden; }
+.honorableSpeaker__list {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -10px;
+  margin-right: -10px; }
+@media screen and (min-width: 767px) {
+  .honorableSpeaker__list {
+    margin-left: -15px;
+    margin-right: -15px; } }
+@media screen and (min-width: 1060px) {
+  .honorableSpeaker__list {
+    margin-left: -25px;
+    margin-right: -25px; } }
+.honorableSpeaker__item {
+  padding: 10px;
+  width: 50%; }
+@media screen and (min-width: 767px) {
+  .honorableSpeaker__item {
+    padding: 15px;
+    width: 33.3333%; } }
+@media screen and (min-width: 1060px) {
+  .honorableSpeaker__item {
+    padding: 25px; } }
+.honorableSpeaker .speaker {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  min-height: 100px;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid #ebebeb;
+  position: relative;
+  overflow: hidden;
+  color: #000; }
+.honorableSpeaker .speaker > * {
+  pointer-events: none; }
+.honorableSpeaker .speaker__imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: #51b2a4;
+  overflow: hidden; }
+.honorableSpeaker .speaker__imageWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+.honorableSpeaker .speaker__content {
+  width: 100%;
+  position: relative;
+  padding: 10px 15px 20px 10px; }
+@media screen and (min-width: 767px) {
+  .honorableSpeaker .speaker__content {
+    padding: 15px 30px 25px 15px; } }
+@media screen and (min-width: 1060px) {
+  .honorableSpeaker .speaker__content {
+    padding: 20px 30px 40px 20px; } }
+.honorableSpeaker .speaker__name {
+  font-size: 1.4em;
+  font-weight: 600; }
+@media screen and (min-width: 767px) {
+  .honorableSpeaker .speaker__name {
+    font-size: 1.8em; } }
+.honorableSpeaker .speaker__copy {
+  font-size: 1.2em;
+  color: #999;
+  margin-top: 6px; }
+@media screen and (min-width: 767px) {
+  .honorableSpeaker .speaker__copy {
+    font-size: 1.4em;
+    margin-top: 8px;
+    padding-right: 20px; } }
+
+[id^="SpeakerInfo"] {
+  z-index: 200; }
+@media screen and (min-width: 1060px) {
+  [id^="SpeakerInfo"] {
+    overflow-y: auto; } }
+@media screen and (min-width: 767px) {
+  [id^="SpeakerInfo"] .modal__overlay {
+    background-color: rgba(14, 25, 62, .97); } }
+[id^="SpeakerInfo"] .modal__closeTop {
+  z-index: 10;
+  background-color: #fff;
+  fill: #000;
+  height: 44px;
+  width: 44px;
+  border-radius: 50em;
+  margin-top: 20px;
+  margin-right: 20px; }
+[id^="SpeakerInfo"] .modal__content {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  transform: translateY(100%);
+  transition: all 258ms ease; }
+@media screen and (min-width: 767px) {
+  [id^="SpeakerInfo"] .modal__content {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    transform: translateY(100px);
+    height: auto;
+    max-height: none;
+    margin-top: 100px;
+    margin-bottom: 100px; } }
+[id^="SpeakerInfo"] .modal__content main {
+  height: 100%;
+  overflow-y: auto; }
+@media screen and (min-width: 767px) {
+  [id^="SpeakerInfo"] .modal__content main {
+    padding-bottom: 0; } }
+[id^="SpeakerInfo"].modal--open .modal__content {
+  transform: translateY(0%);
+  transition: all 344ms ease; }
+
+.speakerInfoBanner {
+  height: 210px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #51b2a4; }
+@media screen and (min-width: 767px) {
+  .speakerInfoBanner {
+    height: 290px; } }
+
+.speakerInfoContent {
+  padding: 20px 30px 100px; }
+@media screen and (min-width: 767px) {
+  .speakerInfoContent {
+    padding: 30px 60px 120px; } }
+.speakerInfoContent .heading {
+  font-size: 2.4em;
+  font-weight: 600; }
+.speakerInfoContent .heading + .copy {
+  color: #999; }
+.speakerInfoContent .copy {
+  font-size: 1.4em;
+  color: #666;
+  margin-top: 6px;
+  line-height: 1.67;
+  max-width: 480px; }
+@media screen and (min-width: 767px) {
+  .speakerInfoContent .copy {
+    margin-top: 8px;
+    padding-right: 30px; } }
+.speakerInfoContent .title {
+  font-size: 1.8em;
+  font-weight: 600; }
+.speakerInfoContent .title + .copy {
+  margin-top: 20px; }
+.speakerInfoContent .label {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 40px; }
+.speakerInfoContent .divider {
+  border-bottom: 1px solid #ddd;
+  margin-top: 40px;
+  margin-bottom: 40px; }
 
 /*# sourceMappingURL=main.css.map */
