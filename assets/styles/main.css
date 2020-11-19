@@ -184,9 +184,65 @@ svg {
   .pageHeader__title {
     font-size: 7em; } }
 
-footer {
-  height: 80px;
-  border-top: 1px solid #ebebeb; }
+.footer {
+  position: relative; }
+.footer__container {
+  position: relative;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1060px; }
+.footer__row {
+  border-top: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-top: 60px; }
+.footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+.footer .social__link {
+  position: relative;
+  border: 0;
+  padding: 0;
+  font-family: "Gilroy", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  background-color: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  text-rendering: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+.footer .social__link:hover, .footer .social__link:focus {
+  outline: none; }
+.footer .social__link:not(:last-child) {
+  margin-right: 10px; }
+.footer .crafted {
+  font-size: 1.4em;
+  color: #999; }
+.footer .crafted a {
+  position: relative;
+  text-decoration: none;
+  color: inherit; }
+.footer .crafted a:hover {
+  text-decoration: underline; }
 
 .header {
   background-color: #0e193e; }
