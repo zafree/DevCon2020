@@ -10,8 +10,11 @@
 
   &__item
     position: relative
-    padding-top: 70px
-    padding-bottom: 70px
+    padding-top: 40px
+    padding-bottom: 40px
+    +tablet
+      padding-top: 70px
+      padding-bottom: 70px
     &:not(:last-child)
       border-bottom: 1px solid #ebebeb
 
@@ -42,7 +45,7 @@
     transform: translateX(-100%) rotate(-90deg)
     transform-origin: top right
     margin-left: -40px
-    margin-top: 8px
+    margin-top: 6px
     +tablet
       transform: translateX(-100%) 
       width: 300px
