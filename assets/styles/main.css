@@ -1415,4 +1415,80 @@ nav a.active::after {
   margin-top: 40px;
   margin-bottom: 40px; }
 
+.eventSponsor {
+  position: relative;
+  padding-bottom: 100px; }
+.eventSponsor__container {
+  position: relative;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1060px; }
+.eventSponsor__row {
+  position: relative; }
+.eventSponsor__item {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+@media screen and (min-width: 767px) {
+  .eventSponsor__item {
+    padding-top: 70px;
+    padding-bottom: 70px; } }
+.eventSponsor__item:not(:last-child) {
+  border-bottom: 1px solid #ebebeb; }
+.eventSponsor .sopnsor {
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+@media screen and (min-width: 767px) {
+  .eventSponsor .sopnsor {
+    flex-direction: row; } }
+.eventSponsor .sopnsor__logo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 10px; }
+@media screen and (min-width: 767px) {
+  .eventSponsor .sopnsor__logo {
+    position: absolute;
+    left: 0;
+    top: 0; } }
+.eventSponsor .sopnsor__logo.wedevs, .eventSponsor .sopnsor__logo.joomshaper {
+  height: 60px; }
+.eventSponsor .sopnsor__logo.techmasters, .eventSponsor .sopnsor__logo.devnet, .eventSponsor .sopnsor__logo.pathao, .eventSponsor .sopnsor__logo.authlab, .eventSponsor .sopnsor__logo.themexpert {
+  height: 40px; }
+.eventSponsor .sopnsor__logo.wedevs {
+  width: 254px; }
+.eventSponsor .sopnsor__logo.joomshaper {
+  width: 213px; }
+.eventSponsor .sopnsor__logo.techmasters {
+  width: 158px; }
+.eventSponsor .sopnsor__logo.devnet {
+  width: 126px; }
+.eventSponsor .sopnsor__logo.pathao {
+  width: 87px; }
+.eventSponsor .sopnsor__logo.authlab {
+  width: 90px; }
+.eventSponsor .sopnsor__logo.themexpert {
+  width: 163px; }
+.eventSponsor .sopnsor__content {
+  max-width: 600px; }
+@media screen and (min-width: 767px) {
+  .eventSponsor .sopnsor__content {
+    margin-left: 300px; } }
+.eventSponsor .sopnsor__title {
+  font-size: 2.4em;
+  color: #000;
+  font-weight: 700;
+  display: none; }
+@media screen and (min-width: 767px) {
+  .eventSponsor .sopnsor__title {
+    display: block; } }
+.eventSponsor .sopnsor__copy {
+  font-size: 1.6em;
+  color: #666;
+  line-height: 1.66;
+  margin-top: 10px; }
+
 /*# sourceMappingURL=main.css.map */
