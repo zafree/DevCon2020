@@ -13,8 +13,8 @@
 
 
     var eventDate = "12/13/2020";
-    var timeStart = new Date(eventDate + " 08:00 AM"); 
-    var timeEnd = new Date(eventDate + " 10:45 AM"); 
+    var timeStart = new Date(eventDate + " 08:05 AM"); 
+    var timeEnd = new Date(eventDate + " 10:50 AM"); 
     var todaysDate = new Date();
 
     // time between given range
@@ -25,7 +25,7 @@
       var timediff = (minutesNow - minutesEventStart) / 60; 
 
       // calc 5mins = 60px 
-      var beforeSpace = 60;
+      var beforeSpace = 0;
       var px = timediff * (60/5) + beforeSpace;
       
       if (typeof(liveIndicator) != 'undefined' && liveIndicator != null) {
