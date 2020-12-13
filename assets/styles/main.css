@@ -155,6 +155,135 @@ svg {
   opacity: 1;
   visibility: visible; }
 
+.field {
+  position: relative; }
+.field:not(:first-child) {
+  margin-top: 20px; }
+@media screen and (min-width: 767px) {
+  .field:not(:first-child) {
+    margin-top: 30px; } }
+.field.hasError .field__input {
+  border-color: red; }
+.field__input {
+  position: relative;
+  font-family: "Gilroy", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  max-width: 100%;
+  width: 100%;
+  line-height: 1.5;
+  color: #000;
+  border: 1px solid #ebebeb;
+  box-shadow: none;
+  border-radius: 2px;
+  padding: 12px 15px;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all .1s ease-out;
+  height: 44px;
+  padding: 12px 15px 10px;
+  font-size: 1.6em;
+  font-weight: 500;
+  border: none;
+  border: 1px solid #0e193e;
+  border-radius: 6px; }
+.field__input:focus, .field__input:active {
+  border-color: #bbb;
+  box-shadow: none;
+  outline: none; }
+.field__input::-moz-placeholder {
+  color: #bbb; }
+.field__input::-webkit-input-placeholder {
+  color: #bbb; }
+.field__input:-moz-placeholder {
+  color: #bbb; }
+.field__input:-ms-input-placeholder {
+  color: #bbb; }
+@media screen and (min-width: 767px) {
+  .field__input {
+    height: 48px;
+    padding: 12px 20px 10px;
+    font-size: 2em; } }
+.field__input:focus, .field__input:active {
+  box-shadow: none;
+  outline: none;
+  border-color: #0e193e; }
+.field__input::-moz-placeholder {
+  color: #bbb; }
+.field__input::-webkit-input-placeholder {
+  color: #bbb; }
+.field__input:-moz-placeholder {
+  color: #bbb; }
+.field__input:-ms-input-placeholder {
+  color: #bbb; }
+.field__label {
+  display: block;
+  color: #0e193e;
+  font-size: 1.6em;
+  font-weight: 600;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  transition: all .1s ease-out; }
+@media screen and (min-width: 767px) {
+  .field__label {
+    font-size: 1.8em;
+    margin-bottom: 5px; } }
+.field__error {
+  color: red;
+  font-size: 1.2em;
+  margin-top: 2px; }
+
+.checkboxWrapper {
+  padding-top: 20px; }
+@media screen and (min-width: 767px) {
+  .checkboxWrapper {
+    padding-top: 40px; } }
+
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px; }
+.checkbox__box {
+  display: inline-flex; }
+.checkbox__box input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+.checkbox__box input[type="checkbox"]:checked ~ .checkbox__checkbox {
+  border-color: #51b2a4;
+  background-color: #51b2a4; }
+.checkbox__checkbox {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #707070;
+  margin-right: 10px;
+  border-radius: 4px; }
+.checkbox__checkbox::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg); }
+.checkbox__text {
+  flex: 1;
+  padding-top: 3px;
+  font-size: 1.2em;
+  line-height: 1.33;
+  font-weight: 500;
+  color: #0e193e;
+  max-width: 420px;
+  padding-right: 20px; }
+.checkbox__text a {
+  color: #51b2a4; }
+
 .pageHeader {
   position: relative;
   background-color: #0e193e;
@@ -430,6 +559,112 @@ svg {
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 76px; } }
+
+#Registration {
+  z-index: 200; }
+@media screen and (min-width: 1060px) {
+  #Registration {
+    overflow-y: auto; } }
+@media screen and (min-width: 767px) {
+  #Registration .modal__overlay {
+    background-color: rgba(14, 25, 62, .97); } }
+#Registration .modal__closeTop {
+  z-index: 10;
+  background-color: #fff;
+  fill: #000;
+  height: 44px;
+  width: 44px;
+  border-radius: 50em;
+  margin-top: 20px;
+  margin-right: 20px; }
+#Registration .modal__content {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  transform: translateY(-100%);
+  transition: all 258ms ease; }
+@media screen and (min-width: 767px) {
+  #Registration .modal__content {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    transform: translateY(-100px);
+    height: auto;
+    max-height: none;
+    margin-top: 100px;
+    margin-bottom: 100px; } }
+#Registration .modal__content main {
+  height: 100%;
+  overflow-y: auto; }
+@media screen and (min-width: 767px) {
+  #Registration .modal__content main {
+    padding-bottom: 0; } }
+#Registration.modal--open .modal__content {
+  transform: translateY(0%);
+  transition: all 344ms ease; }
+
+.registrationBanner {
+  height: 87px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #51b2a4; }
+@media screen and (min-width: 767px) {
+  .registrationBanner {
+    height: 147px; } }
+
+.registrationContent {
+  padding: 20px 30px 60px; }
+@media screen and (min-width: 767px) {
+  .registrationContent {
+    padding: 30px 60px 80px; } }
+.registrationContent .heading {
+  font-size: 1.8em;
+  font-weight: 600; }
+@media screen and (min-width: 767px) {
+  .registrationContent .heading {
+    font-size: 2.4em;
+    margin-bottom: -15px; } }
+.registrationContent .divider {
+  border-bottom: 1px solid #ddd;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+@media screen and (min-width: 767px) {
+  .registrationContent .divider {
+    margin-top: 40px;
+    margin-bottom: 40px; } }
+.registrationContent .registerNowButton {
+  position: relative;
+  border: 0;
+  padding: 0;
+  font-family: "Gilroy", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  background-color: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  text-rendering: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  background-color: #51b2a4;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 50em; }
+.registrationContent .registerNowButton:hover, .registrationContent .registerNowButton:focus {
+  outline: none; }
 
 #SideMenu {
   z-index: 101; }

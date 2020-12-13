@@ -148,3 +148,89 @@
     // background-color: rgba($white, 0.2)
 
     
+
+#Registration
+  z-index: 200
+  +desktop
+    overflow-y: auto
+  .modal__overlay
+    // background-color: rgba($blue, 0.97)
+    +tablet
+      background-color: rgba($blue, 0.97)
+  .modal__closeTop
+    z-index: 10
+    background-color: $white
+    fill: $black
+    height: 44px
+    width: 44px
+    border-radius: 50em
+    margin-top: 20px
+    margin-right: 20px
+  .modal__content
+    overflow: hidden
+    position: relative
+    height: 100%
+    transform: translateY(-100%)
+    transition: all $speed*3 ease
+    +tablet
+      max-width: 600px
+      margin-left: auto
+      margin-right: auto
+      border-radius: 20px
+      transform: translateY(-100px)
+      height: auto
+      max-height: none
+      margin-top: 100px
+      margin-bottom: 100px
+    main
+      height: 100%
+      overflow-y: auto
+      +tablet
+        padding-bottom: 0
+
+  &.modal--open
+    .modal__content
+      transform: translateY(0%)
+      transition: all $speed*4 ease
+
+
+.registrationBanner
+  height: 87px
+  position: relative
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-color: rgba($green, 1)
+  +tablet
+    height: 147px
+
+.registrationContent
+  padding: 20px 30px 60px
+  +tablet
+    padding: 30px 60px 80px
+  .heading
+    font-size: 1.8em
+    font-weight: $weight-semibold
+    // margin-bottom: -5px
+    +tablet
+      font-size: 2.4em
+      margin-bottom: -15px
+  .divider
+    border-bottom: 1px solid #ddd
+    margin-top: 20px
+    margin-bottom: 20px
+    +tablet
+      margin-top: 40px
+      margin-bottom: 40px
+
+  .registerNowButton
+    +button
+    height: 56px
+    background-color: $green
+    font-size: 1.8em
+    font-weight: $weight-bold
+    color: $white
+    display: block
+    width: 100%
+    margin-top: 30px
+    border-radius: 50em
