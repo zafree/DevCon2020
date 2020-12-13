@@ -13,8 +13,8 @@
 
 
     var eventDate = "12/13/2020";
-    var timeStart = new Date(eventDate + " 08:05 AM"); 
-    var timeEnd = new Date(eventDate + " 10:50 AM"); 
+    var timeStart = new Date(eventDate + " 09:55 AM"); 
+    var timeEnd = new Date(eventDate + " 02:55 PM"); 
     var todaysDate = new Date();
 
     // time between given range
