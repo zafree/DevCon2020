@@ -4,6 +4,7 @@
  * @copyright 2020 Zafree
  * @license MIT
  */
+@charset "UTF-8";
 @font-face {
   font-family: "Gilroy";
   font-style: normal;
@@ -325,16 +326,29 @@ svg {
 .footer__row {
   border-top: 1px solid #ebebeb;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 40px;
   margin-top: 60px; }
+@media screen and (min-width: 767px) {
+  .footer__row {
+    flex-direction: row; } }
 .footer .social {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 30px; }
+@media screen and (min-width: 767px) {
+  .footer .social {
+    margin-top: 0; } }
+.footer .social__copy {
+  font-size: 1.4em;
+  color: #000;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 10px; }
 .footer .social__link {
   position: relative;
   border: 0;
@@ -363,15 +377,47 @@ svg {
   outline: none; }
 .footer .social__link:not(:last-child) {
   margin-right: 10px; }
-.footer .crafted {
+.footer .copyright {
   font-size: 1.4em;
-  color: #999; }
-.footer .crafted a {
+  color: #666; }
+.footer .quicklinks {
+  font-size: 1.4em;
+  color: #666;
+  display: inline-flex; }
+.footer .quicklinks__item:not(:last-child)::after {
+  content: "•";
+  position: relative;
+  margin-right: 12px;
+  margin-left: 12px;
+  pointer-events: none; }
+.footer .quicklinks__link {
+  position: relative;
+  border: 0;
+  padding: 0;
+  font-family: "Gilroy", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  background-color: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  text-rendering: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   text-decoration: none;
-  color: inherit; }
-.footer .crafted a:hover {
-  text-decoration: underline; }
+  color: inherit;
+  height: 32px; }
+.footer .quicklinks__link:hover, .footer .quicklinks__link:focus {
+  outline: none; }
+.footer .quicklinks__link:hover {
+  text-decoration: underline;
+  color: #ec411e; }
 
 .header {
   background-color: #0e193e; }
